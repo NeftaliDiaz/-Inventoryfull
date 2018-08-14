@@ -1,0 +1,77 @@
+Instrucciones para la instalación y la configuración WEB INICIAL
+---------------------------------------
+la web de inicio esta configurada teniendo en cuenta la web de muestra, o sea separado por dos carpetas donde se encuentran los archivos de la pagina de búsqueda y la de la aplicación de RMA i reparaciones y servicios.
+La web de inicio esta modificada completamente para que se vea una simple idea de como se podría integrar las aplicaciones en nuestra propia web.
+Para el que quiera el código fuente de la web de inicio lo adjunto en la raiz de la descarga con el nombre oficial que es elevator.zip.
+---------------------------------------
+Para acceder a las aplicaciones
+La app de RMA - Reparaciones y servicios es el icono de Servicios & RMA
+La App de Buscar (aun no funciona) esta en el icono de Buscar Servicios o RMA
+Ambas debajo de las imágenes
+
+
+Instrucciones para la instalación y la configuración APP RMA REPARACIONES
+---------------------------------------
+
+---------------------------------------
+El archivo de la base de datos es  banco.sql.
+---------------------------------------
+
+
+---------------------------------------
+Dentro de la carpeta “rma” -> ”Aplicación" -> “config” editar el archivo 'config.php' en la siguiente línea.
+
+$ config ['base_url'] = '';
+
+Aquí podrás colocar la URL base de su solicitud, tomar la raíz del servidor por ejemplo lugar como este: $ config ['base_url'] = 'http://127.0.0.1'; o 'http://dominio.com'
+
+Si dentro de una carpeta llamada por ejemplo “RMA 'se parece a esto:
+$ config ['base_url'] = 'http://127.0.0.1/RMA';
+
+
+Nota: En algunos casos, el medio ambiente local (localhost) es especificar el puerto.
+Ejemplo: $ config ['base_url'] = 'http://127.0.0.1:3000/mapos';
+---------------------------------------
+
+
+---------------------------------------
+
+Dentro de la carpeta “rma” -> ”Aplicación" -> “config” editar el archivo 'database.php' y colocar los datos de acceso a la base de datos.
+---------------------------------------
+
+---------------------------------------
+El logotipo está dentro de la carpeta de activos / img. Si desea cambiarlo, sólo tiene que reemplazar el logotipo deseado con el mismo nombre - El del Login es (logos.png)y el de la aplicación es (logo.png).
+---------------------------------------
+
+---------------------------------------
+Datos de acesso
+Email: admin@admin.com
+contraseña: 123456
+---------------------------------------
+para acceder al panel del clliente la ruta es:
+
+www.sudominio.com/index.php/conecte
+
+y si esta dentr de una carpeta el aplicativo seria:
+
+www.sudominio.com/sucarpeta/index.php/conecte
+
+NOTA IMPORTANTE
+
+Si por alguna motivo el programa les guarda una fecha por defecto en Fecha Final, al cargar una orden de servicio y también en el dashboard
+solo deberán modificar estos archivos - se deberá mirar que fecha carga por defecto el sistema y
+cambiarla por la que figura ej mi sistema me carga 30/11/-0001  por lo que deberá escribir if($dataFinal ==  “30/11/-0001”
+
+rma/application\views\os
+
+Archivos - editarOs.php ( linea 67)  y  os.php (linea 74)
+
+rma/application\views\mapos
+
+Archivo - painel.php (linea 112)
+
+Qualquer duda consultar Y NO OLVIDEIS DAR LAS GRACIAS!!! 
+
+
+
+
